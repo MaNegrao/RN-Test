@@ -55,7 +55,7 @@ export default function HomeScreen() {
 
       <View style={styles.tabBarInfoContainer}>
         <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
+            Testes
         </Text>
 
         <View
@@ -96,11 +96,6 @@ function DevelopmentModeNotice() {
   }
 }
 
-function handleLearnMorePress() {
-  WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/workflow/development-mode/'
-  );
-}
 
 function handleHelpPress() {
   WebBrowser.openBrowserAsync(
