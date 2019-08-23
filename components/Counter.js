@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 class Counter extends Component {
 
@@ -25,15 +26,16 @@ class Counter extends Component {
     });
   }
 
-  render() {
+  render(){
     const { count } = this.state;
     return (
       <View className="counter">
         <Text> Count: { count } </Text>
-        <Button onClick={this.handleIncrement}> + </Button>
-        <Button onClick={this.handledDecrement}> - </Button>
-        <Button onClick={this.reset}> Reset </Button>
+        <Button onPress={this.handleIncrement}> + </Button>
+        <Button onPress={this.handledDecrement}> - </Button>
+        <Button onPress={this.reset}> Reset </Button>
       </View>
+    )
   }
 
 }
