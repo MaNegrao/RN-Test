@@ -6,17 +6,37 @@ class Counter extends Component {
     count: 15
   }
 
+  handleIncrement = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
+  }
+
+  handleDecrement = () => {
+    this.setState({
+      count: this.state.count - 1
+    });
+  }
+
+  reset = () => {
+    // you can also pass in a function to setState
+    this.setState({
+      count: 52
+    });
+  }
+
   render() {
     const { count } = this.state;
     return (
-      <section className="counter">
-        <h1> Count: { count } </h1>
-        <button className="full-width"> Increment </button>
-        <button className="full-width"> Decrement </button>
-        <button className="full-width"> Reset </button>
-      </section>
-    );
+      <View className="counter">
+        <Text> Count: { count } </Text>
+        <Button onClick={this.handleIncrement}> + </Button>
+        <Button onClick={this.handledDecrement}> - </Button>
+        <Button onClick={this.reset}> Reset </Button>
+      </View>
   }
+
 }
+
 
 export default Counter;
