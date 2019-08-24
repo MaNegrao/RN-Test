@@ -31,8 +31,8 @@ class Counter extends Component {
     return (
       <View className="counter">
         <Text> Count: { count } </Text>
-        <Button onPress={this.handleIncrement} title="+"></Button>
-        <Button onPress={this.handledDecrement} title="-"></Button>
+        <Button onPress={this.handleIncrement} color="green" title="+"></Button>
+        <Button onPress={this.handleDecrement} color="red" title="-"></Button>
         <Button onPress={this.reset} title="Reset"></Button>
       </View>
     )
