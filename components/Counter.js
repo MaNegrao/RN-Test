@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 class Counter extends Component {
 
   state = {
-    count: 15
+    count: 0
   }
 
   handleIncrement = () => {
@@ -22,7 +22,7 @@ class Counter extends Component {
   reset = () => {
     // you can also pass in a function to setState
     this.setState({
-      count: 52
+      count: 0
     });
   }
 
@@ -31,9 +31,9 @@ class Counter extends Component {
     return (
       <View className="counter">
         <Text> Count: { count } </Text>
-        <Button onPress={this.handleIncrement}> + </Button>
-        <Button onPress={this.handledDecrement}> - </Button>
-        <Button onPress={this.reset}> Reset </Button>
+        <Button onPress={this.handleIncrement} title="+"></Button>
+        <Button onPress={this.handledDecrement} title="-"></Button>
+        <Button onPress={this.reset} title="Reset"></Button>
       </View>
     )
   }
