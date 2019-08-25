@@ -21,9 +21,15 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
-      "**/*"
+      "assets/*"
     ],
+    "android": {
+      "package": "com.rntest.urg",
+      "versionCode": 1,
+      "permissions": []
+    },
     "ios": {
+      "bundleIdentifier": "com.rntest.urg",
       "supportsTablet": true
     }
   }
