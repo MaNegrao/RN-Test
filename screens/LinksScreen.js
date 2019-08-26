@@ -2,10 +2,12 @@ import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import Counter from '../components/Counter';
+import { isNullLiteralTypeAnnotation, isPipelineBareFunction } from '@babel/types';
 
 export default function LinksScreen() {
   return (
     <View style={styles.container}>
+      <Counter />
       <Counter />
     </View>
   );
@@ -17,7 +19,8 @@ LinksScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
+    padding: 20,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
