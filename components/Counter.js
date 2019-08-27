@@ -40,5 +40,10 @@ class Counter extends Component {
 
 }
 
+const styles = StyleSheet.create({
+  textView: {
+  },
+});
+
 
 export default Counter;
