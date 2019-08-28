@@ -33,7 +33,7 @@ class Counter extends Component {
         <Text style={styles.text}> Count: { count } </Text>
         <Button onPress={this.handleIncrement} color="green" title="+"></Button>
         <Button onPress={this.handleDecrement} color="red" title="-"></Button>
-        <Button onPress={this.reset} title="Reset"></Button>
+        <Button style={styles.resetButton} onPress={this.reset} title="Reset"></Button>
       </View>
     )
   }
@@ -46,7 +46,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   resetButton:{
-    
+    fontSize: 15,
+  },
+  incrementButton:{
+    fontSize: 15 
+  },
+  decrementButton:{
+    fontSize: 15
   }
 });
 
