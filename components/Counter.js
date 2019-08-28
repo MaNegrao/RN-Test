@@ -41,12 +41,16 @@ class Counter extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    justifyContent: 'space-around'
+  },
   text: {
     fontSize: 20,
     fontWeight: 'bold'
   },
   resetButton:{
-    margin: 10,
+    marginTop: 100,
     fontSize: 15,
   },
   incrementButton:{

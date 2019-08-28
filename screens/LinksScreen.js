@@ -7,7 +7,7 @@ import { isNullLiteralTypeAnnotation, isPipelineBareFunction } from '@babel/type
 export default function LinksScreen() {
   return (
     <View style={styles.container}>
-      <Counter />
+      <Counter style={styles.count}/>
       <Counter />
     </View>
   );
@@ -25,4 +25,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
+  count:{
+    flex: 1,
+    justifyContent: "space-around"
+  }
 });
