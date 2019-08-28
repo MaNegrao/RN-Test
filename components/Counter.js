@@ -9,7 +9,7 @@ class Counter extends Component {
 
   handleIncrement = () => {
     this.setState({
-      count: this.state.count == 12 ? 0 : this.state.count + 1
+      count: this.state.count == 11 ? 0 : this.state.count + 1
     });
   }
 
@@ -29,10 +29,10 @@ class Counter extends Component {
   render(){
     const { count } = this.state;
     return (
-      <View className="counter">
+      <View style={styles.container} className="counter">
         <Text style={styles.text}> Count: { count } </Text>
-        <Button onPress={this.handleIncrement} color="green" title="+"></Button>
-        <Button onPress={this.handleDecrement} color="red" title="-"></Button>
+        <Button style={styles.incrementButton} onPress={this.handleIncrement} color="green" title="+"></Button>
+        <Button style={styles.decrementButton} onPress={this.handleDecrement} color="red" title="-"></Button>
         <Button style={styles.resetButton} onPress={this.reset} title="Reset"></Button>
       </View>
     )
@@ -46,12 +46,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   resetButton:{
+    margin: 10,
     fontSize: 15,
   },
   incrementButton:{
+    margin: 10,
     fontSize: 15 
   },
   decrementButton:{
+    margin: 10,
     fontSize: 15
   }
 });
