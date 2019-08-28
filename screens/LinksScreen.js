@@ -21,9 +21,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 2,
     flexDirection:'row',
-    padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#b5f7e8',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
   },
 });
