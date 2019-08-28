@@ -9,13 +9,13 @@ class Counter extends Component {
 
   handleIncrement = () => {
     this.setState({
-      count: this.state.count + 1
+      count: this.state.count == 12 ? 0 : this.state.count + 1
     });
   }
 
   handleDecrement = () => {
     this.setState({
-      count: this.state.count - 1
+      count: this.state.count == 0 ? 0 : this.state.count - 1
     });
   }
 
