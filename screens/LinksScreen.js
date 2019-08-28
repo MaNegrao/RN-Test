@@ -20,6 +20,7 @@ LinksScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 2,
+    flexDirection:'row',
     padding: 20,
     backgroundColor: '#fff',
     alignItems: 'center',
