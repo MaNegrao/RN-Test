@@ -31,7 +31,9 @@ class Counter extends Component {
     return (
       <View style={styles.container} className="counter">
         <Text style={styles.text}>{ count }</Text>
-        <Button style={styles.incrementButton} onPress={this.handleIncrement} color="green" title="+"></Button>
+        <TouchableOpacity style={styles.incrementButton} onPress={this.handleIncrement}>
+         <Text> + </Text>
+        </TouchableOpacity>
         <Button style={styles.decrementButton} onPress={this.handleDecrement} color="red" title="-"></Button>
         <Button style={styles.resetButton} onPress={this.reset} title="Reset"></Button>
       </View>
