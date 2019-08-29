@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button,  TouchableOpacity } from 'react-native';
 
 class Counter extends Component {
 
@@ -19,23 +19,17 @@ class Counter extends Component {
     });
   }
 
-  reset = () => {
-    // you can also pass in a function to setState
-    this.setState({
-      count: 0
-    });
-  }
-
   render(){
     const { count } = this.state;
     return (
       <View style={styles.container} className="counter">
         <Text style={styles.text}>{ count }</Text>
         <TouchableOpacity style={styles.incrementButton} onPress={this.handleIncrement}>
-         <Text> + </Text>
+         <Text style={styles.buttonText}> + </Text>
         </TouchableOpacity>
-        <Button style={styles.decrementButton} onPress={this.handleDecrement} color="red" title="-"></Button>
-        <Button style={styles.resetButton} onPress={this.reset} title="Reset"></Button>
+        <TouchableOpacity style={styles.decrementButton} onPress={this.handleDecrement}>
+         <Text style={styles.buttonText}> - </Text>
+        </TouchableOpacity>
       </View>
     )
   }
@@ -50,7 +44,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around'
   },
   text: {
-    fontSize: 20,
+    fontSize: 70,
+    textAlign: 'center',
     fontWeight: 'bold',
     paddingVertical: 10,
   },
@@ -58,10 +53,16 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   incrementButton:{
-    fontSize: 15,
+    alignItems: 'center',
+    backgroundColor: 'green',
+    padding: 10
   },
   decrementButton:{
     fontSize: 15,
+  },
+  buttonText:{
+    color: 'white',
+    fontSize: 40,
   }
 });
 
