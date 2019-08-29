@@ -30,7 +30,7 @@ class Counter extends Component {
     const { count } = this.state;
     return (
       <View style={styles.container} className="counter">
-        <Text style={styles.text}> Count: { count } </Text>
+        <Text style={styles.text}>{ count }</Text>
         <Button style={styles.incrementButton} onPress={this.handleIncrement} color="green" title="+"></Button>
         <Button style={styles.decrementButton} onPress={this.handleDecrement} color="red" title="-"></Button>
         <Button style={styles.resetButton} onPress={this.reset} title="Reset"></Button>
@@ -42,24 +42,24 @@ class Counter extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     flexDirection: 'column',
+    paddingHorizontal: 30,
     justifyContent: 'space-around'
   },
   text: {
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingVertical: 10,
   },
   resetButton:{
-    marginTop: 100,
     fontSize: 15,
   },
   incrementButton:{
-    margin: 10,
-    fontSize: 15 
+    fontSize: 15,
   },
   decrementButton:{
-    margin: 10,
-    fontSize: 15
+    fontSize: 15,
   }
 });
 
