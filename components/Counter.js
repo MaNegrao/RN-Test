@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button,  TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Button,  TouchableOpacity, Icon } from 'react-native';
 
 class Counter extends Component {
 
@@ -49,20 +49,20 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingVertical: 10,
   },
-  resetButton:{
-    fontSize: 15,
-  },
   incrementButton:{
     alignItems: 'center',
     backgroundColor: 'green',
-    padding: 10
+    padding: 10,
+    marginBottom: 10,
   },
   decrementButton:{
-    fontSize: 15,
+    alignItems: 'center',
+    backgroundColor: 'red',
+    padding: 10
   },
   buttonText:{
     color: 'white',
-    fontSize: 40,
+    fontSize: 50,
   }
 });
 
