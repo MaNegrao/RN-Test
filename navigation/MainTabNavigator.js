@@ -12,6 +12,22 @@ const config = Platform.select({
   default: {},
 });
 
+const GameStack = createStackNavigator(
+  {
+    Game: GameScreen,
+  },
+  config
+);
+
+GameStack.navigationOptions = {
+  tabBarLabel: 'Counter',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-play'} />
+  ),
+};
+
+GameStack.path = '';
+
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
@@ -34,22 +50,6 @@ HomeStack.navigationOptions = {
 };
 
 HomeStack.path = '';
-
-const GameStack = createStackNavigator(
-  {
-    Game: GameScreen,
-  },
-  config
-);
-
-GameStack.navigationOptions = {
-  tabBarLabel: 'Counter',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-play'} />
-  ),
-};
-
-GameStack.path = '';
 
 const SettingsStack = createStackNavigator(
   {
