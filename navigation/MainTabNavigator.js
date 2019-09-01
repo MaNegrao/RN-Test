@@ -22,7 +22,7 @@ const GameStack = createStackNavigator(
 GameStack.navigationOptions = {
   tabBarLabel: 'Counter',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-play'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-play' : 'md-play'} />
   ),
 };
 
@@ -68,8 +68,8 @@ SettingsStack.navigationOptions = {
 SettingsStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
-  HomeStack,
   GameStack,
+  HomeStack,
   SettingsStack,
 });
 
