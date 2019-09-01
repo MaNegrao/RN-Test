@@ -21,9 +21,7 @@ export default function HomeScreen() {
         <View style={styles.welcomeContainer}>
           <Image
             source={
-              __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
+              require('../assets/images/copas.png')
             }
             style={styles.welcomeImage}
           />
