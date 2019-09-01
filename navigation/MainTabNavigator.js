@@ -4,7 +4,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import GameScreen from '../screens/GameScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const config = Platform.select({
@@ -35,21 +35,21 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
-const LinksStack = createStackNavigator(
+const GameStack = createStackNavigator(
   {
-    Links: LinksScreen,
+    Game: GameScreen,
   },
   config
 );
 
-LinksStack.navigationOptions = {
+GameStack.navigationOptions = {
   tabBarLabel: 'Counter',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-play'} />
   ),
 };
 
-LinksStack.path = '';
+GameStack.path = '';
 
 const SettingsStack = createStackNavigator(
   {
@@ -69,7 +69,7 @@ SettingsStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  GameStack,
   SettingsStack,
 });
 
